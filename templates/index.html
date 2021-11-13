@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="/static/app.css">
+ <title>Movie Recommender</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div id="search_container">
+      <h1>Movie Recommendation System</h1>
+        <h2>Enter a Movie</h2>
+        <input type="text" id="movie_input" name="search" placeholder="Please enter movie name" autocomplete="off" spellcheck="false">
+        <div class="results">
+          <ul id="match">
+            <li onclick="movie_suggest(this)"></li>
+            <li onclick="movie_suggest(this)"></li>
+            <li onclick="movie_suggest(this)"></li>
+            <li onclick="movie_suggest(this)"></li>
+            <li onclick="movie_suggest(this)"></li>
+            <li onclick="movie_suggest(this)"></li>
+          </ul>
+        </div>
+      <br><br>
+      <button id="btn" type="submit">Search</button> 
+    </div>
+    <div class="recommendations card">
+      <div class="searched_movie">
+        <div id="searched_image">
+          <img src="" alt="" height="360" width="240" id="image1">
+        </div>
+        <div id="searched_info">
+          <h4 id="M1"></h4>
+          <span id="overview"></span>
+          <br>
+          <span id="budget"></span>
+          <br>
+          <span id="release_date"></span>
+          <br>
+          <span id="runtime"></span>
+          <br>
+          <span id="popularity"></span>
+        </div>
+        
+      </div>
+      <h3>RECOMMENDED MOVIES FOR YOU </h3>
+        <h4>(click any movie below to get more recommendations)</h4>
+      <div class="recommendation1">
+        <div class="rec_movies first" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image2">
+          <h4 id="M2"></h4>
+          <span id="id1"></span>
+        </div>
+        <div class="rec_movies second" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image3">
+          <h4 id="M3"></h4>
+          <span id="id2"></span>
+        </div>
+        <div class="rec_movies third" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image4">
+          <h4 id="M4"></h4>
+          <span id="id3"></span>
+        </div>
+        <div class="rec_movies fourth" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image5">
+          <h4 id="M5"></h4>
+          <span id="id4"></span>
+        </div>
+      </div>
+      
+      <div class="recommendation2">
+        
+        <div class="rec_movies fifth" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image6">
+          <h4 id="M6"></h4>
+          <span id="id5"></span>
+        </div>
+        <div class="rec_movies sixth" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image7">
+          <h4 id="M7"></h4>
+          <span id="id6"></span>
+        </div>
+        <div class="rec_movies seventh" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image8">
+          <h4 id="M8"></h4>
+          <span id="id7"></span>
+        </div>
+        <div class="rec_movies eighth" onclick="recommend(this)">
+          <img src="" alt="" height="360" width="240" id="image9">
+          <h4 id="M9"></h4>
+          <span id="id8"></span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="loading">
+    <img id="loader" src="/static/loading.gif" alt="loading...">
+  </div>
+  <script src="/static/ui.js"></script>
+  <script src="/static/API.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
